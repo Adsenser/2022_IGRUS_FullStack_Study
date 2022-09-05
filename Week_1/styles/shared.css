@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    background-color: rgb(193, 180, 180);
+    margin: 50px;
+  }
+  
+  h1 {
+      font-family: 'Oswald'; /*다른곳에서 가져온 글꼴을 입력할 때는 ''안에다가 입력해야 한다 */
+      /* text-align: center; 이미 바디에서 텍스트를 가운데로 정렬시켰기 때문이다 */
+      color: rgb(32, 160, 111);
+    }
+  
+    p {
+      font-family: 'Fira Sans', sans-serif; /* ,를 이용해 폴백폰트(앞의 글꼴 로딩 실패시 이용되는 글꼴) 를 지정할 수 있다 */
+      /* text-align: center; */
+      color: rgb(255, 0, 0);
+    }
+  
+    a {
+      color: rgb(167,111,39);
+      text-decoration: none
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  #todays-challenge {
+    color: rgb(50, 171, 78);
+    font-weight: bold;
+    font-size: 52px;
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+  
