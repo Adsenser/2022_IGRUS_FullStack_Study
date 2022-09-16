@@ -1,0 +1,23 @@
+.emphasize {
+    background-color: aquamarine;
+    color:brown;
+}
+
+li {
+    list-style: none;
+    border-radius: 12px;
+    background-color: bisque;
+    border: 20px dashed rgb(red);
+    padding: 16px;
+    margin: 32px;
+    box-shadow: 3px 2px 4px rgba(0,0,0,0.5);
+  
+}
+
+.h2 {
+    background-color: azure;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 200px 200px;
+    text-decoration: none;
+}
