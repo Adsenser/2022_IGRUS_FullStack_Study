@@ -1,0 +1,70 @@
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Lora' ,serif;
+    color: purple;
+}
+img {
+    width: 500px;
+    height: auto;
+}
+
+main {
+    background-color: rgb(151, 71, 236);
+    border-radius: 10px;
+    padding: 10px 40px;
+    margin: 50px 200px 30px 200px;
+    
+}
+
+body {
+    background-color: rgb(209, 168, 209);
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+p{
+    color: white
+}
+
+li {
+    list-style: square;
+    color: rgb(229, 222, 91);
+    margin: 16px 0px 
+    /* li와 p 끼리 마지 충돌 발생 */
+}
+
+ul{
+    padding: 0px 15px;
+}
+
+span{
+    background-color: rgb(229, 229, 150);
+    border-radius: 4px;
+    color: black;
+}
+
+footer{
+    text-align: center;
+}
+
+a {
+    background-color: rgb(224, 222, 76);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+footer p {
+    color: black;
+    margin-top: 20px;
+    
+}
