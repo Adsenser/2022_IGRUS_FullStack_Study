@@ -1,4 +1,9 @@
-div {
+  html{
+  margin: 20px;
+  }  
+  
+  
+  div {
     background-color: #c7c7c7;
     padding: 20px;
     text-align: center;
@@ -12,6 +17,7 @@ div {
   
   #container {
     background-color: #521751;
+    position: relative;
   }
   
   #container p {
@@ -25,8 +31,10 @@ div {
   #two {
     background-color: #c95bc7;
     position: relative;
-    bottom:20px;
-    left: 40px;
+    /* top:-200px; 추천하는 방식은 아님 */
+    /* position: absolute; */
+    position: fixed;
+    top: 0px;
   }
   
   #three {
