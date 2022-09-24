@@ -35,10 +35,15 @@ p{
 }
 
 li {
-    list-style: square;
+    box-sizing: 20px;
+    padding-left: 5px;
+    list-style: none;
     color: rgb(229, 222, 91);
-    margin: 16px 0px 
-    /* li와 p 끼리 마지 충돌 발생 */
+    margin: 16px 0px;
+    border-left: 5px solid ;
+    border-color: rgb(yellow);
+    font-size: 24px;
+    
 }
 
 ul{
