@@ -12,7 +12,8 @@ ul {
   margin: 10px auto;
   padding: 10px;
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px 200px
 }
 
 li {
@@ -20,4 +21,9 @@ li {
   text-align: center;
   width: 200px;
   margin: 20px auto;
+}
+
+li:nth-of-type(3) {
+  background-color: yellow;
+  grid-column: 1/3;
 }
