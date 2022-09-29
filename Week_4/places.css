@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(30deg, rgb(77,77,77),rgb(77,77,77));
+    color: rgb(68,68,68);
 }
 
 
@@ -8,10 +9,16 @@ header {
 }
 
 main ul{
-    width: 800px;
+    width: 1200px;
     margin: 0 auto;
     /* display: flex;
     justify-content: space-between; */
+
+    /* display: flex; */
+    /* flex-direction: column; <- 이걸로는 작동안됨*/
+    /* flex-wrap: wrap; */
+     /* 뭐지? 왜 wrap 했는데 두개의 요소로 세로방향으로 나뉘지? */
+    /* width: 1500px; */
 }
 
 main li {
@@ -20,6 +27,7 @@ main li {
     box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     border-radius: 6px;
     overflow: hidden;
+    width: 500px;
 }
 
 main li img {
@@ -32,7 +40,7 @@ main li img {
     padding:24px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
 }
 
 div p {
@@ -52,7 +60,7 @@ li div a:hover {
     
 }
 
-li div a {
+.actions a {
     text-decoration: none;
     color: rgb(45, 210, 199);
     font-weight: bold;
