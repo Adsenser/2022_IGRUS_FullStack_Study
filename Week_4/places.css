@@ -8,7 +8,7 @@ header {
     position: static;
 }
 
-main ul{
+.ul1 {
     width: 1200px;
     margin: 0 auto;
     /* display: flex;
@@ -19,6 +19,44 @@ main ul{
     /* flex-wrap: wrap; */
      /* 뭐지? 왜 wrap 했는데 두개의 요소로 세로방향으로 나뉘지? */
     /* width: 1500px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+    
+}
+
+.ul0 {
+    width: 100%;
+    margin: 0 0;
+    display: flex;
+    justify-content: cneter;
+
+    /* display: flex; */
+    /* flex-direction: column; <- 이걸로는 작동안됨*/
+    /* flex-wrap: wrap; */
+     /* 뭐지? 왜 wrap 했는데 두개의 요소로 세로방향으로 나뉘지? */
+    /* width: 1500px; */
+    /* display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 20px; */
+    
+}
+
+.ul2 {
+    width: 1200px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: space-between; */
+
+    /* display: flex; */
+    /* flex-direction: column; <- 이걸로는 작동안됨*/
+    /* flex-wrap: wrap; */
+     /* 뭐지? 왜 wrap 했는데 두개의 요소로 세로방향으로 나뉘지? */
+    /* width: 1500px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+    
 }
 
 main li {
@@ -27,7 +65,8 @@ main li {
     box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     border-radius: 6px;
     overflow: hidden;
-    width: 500px;
+    width: 700px;
+    
 }
 
 main li img {
