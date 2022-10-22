@@ -40,7 +40,7 @@ main li {
 
 main li img {
     width: 300px;
-    height: 280px;
+    height: auto;
     object-fit: cover;
 }
 
