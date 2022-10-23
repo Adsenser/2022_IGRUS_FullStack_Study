@@ -1,0 +1,84 @@
+body {
+    font-family: "preconnect", sans-serif;
+    margin: 0;
+    background-color: rgb(44, 42, 37);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    width: 100%;
+    background-color: rgb(27,26,26);
+    margin: 0;
+
+}
+
+#page-logo a{
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(255, 128, 0);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color:rgb(255, 128, 0);
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+main h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 30px;
+    list-style: none;
+    /*이 밑에거 추가하니깐 모양은 나쁘지 않아 졌는데 뭔가 이상함*/
+    margin: 0 300px;
+    align-items: center;
+    padding: 0;
+    
+}
+
+ul li {
+    display: flex; /*이걸 안해서 계속 사진이랑 li부분이랑 크기가 따로 놀았음 */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(227,204,180);
+    border-radius: 7px;
+    overflow: hidden; /*이거 까먹었음*/
+    width: 500px;
+    padding: 0 0 20px 0;
+}
+
+ul li img{
+    width: 500px;
+    height: 300px;
+    object-fit:cover;
+}
+
+#contents {
+    text-align: center;
+}
+
+#contents a{
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
