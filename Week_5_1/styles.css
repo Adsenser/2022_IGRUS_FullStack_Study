@@ -107,8 +107,8 @@ body {
     main h1 {
       font-size: 1.5rem;
     }
-    #main-header nav a {
-      font-size: 0px;
-    }
+    #main-header nav {
+      display:none;
+    } 
   }
 
