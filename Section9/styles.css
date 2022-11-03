@@ -20,6 +20,10 @@ html {
     margin: 50px auto;
     box-shadow: 3px 3px 10px rgb(201, 200, 200);
     transition: transform 0.5s ease-out ;
+    /* transition: background-color 0.5s ease-out; 여기에 transiton 속성을 추가하면 여기에 뭐가 들어가든 css 종속적 논리에 따라서 위에 있는 transform 속성을 덮어쓰게 됨 */
+    /*그래서 여기에 background-color라는 속성을 추가한것임*/
+
+    /*위의 주석을 풀면 전환 효과가 다 사라짐!! css원칙을 잊지 말자@! */
   }
 
   .card-container:hover {
@@ -36,7 +40,7 @@ html {
     font-family: 'Zilla Slab', serif;
     font-weight: 600;
   }
-  
+
   .card-info {
     color: var(--color-grey-400);
     text-align: left;
@@ -98,10 +102,14 @@ html {
     border: 2px solid rgb(224, 224, 224);
     font-size: 18px;
     font-weight: 600;
+    transition: transform 0.5s ease-out ;
+    /*여기에 transiton 속성을 추가하면 여기에 뭐가 들어가든 css 종속적 논리에 따라서 위에 있는 transform 속성을 덮어쓰게 됨*/
+    transition: background-color 0.5s ease-out;
   }
   
   .button:hover {
     color: white;
     background-color: rgb(0, 170, 255);
     border: 2px solid rgb(255, 255, 255);
+    transform: scale(1.05);
   }
