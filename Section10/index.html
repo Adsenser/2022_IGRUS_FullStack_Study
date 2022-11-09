@@ -14,14 +14,14 @@
         <h1>Demo Form</h1>
     </header>
     <main>
-        <form action="/user-data" method="POST">
+        <form action="/user-data" method="GET" novalidate >
             <section>
                 <h2>Your detail</h2>
 
                 <ul>
                     <li>
                         <label for="username">Your name</label>
-                        <input type="text" name="user-name" id="username">
+                        <input type="text" name="user-name" id="username" required>
                     </li>
                     <li>
                         <label for="useremail">Your email address</label>
@@ -29,7 +29,7 @@
                     </li>
                     <li>
                         <label for="userpassword">Your password</label>
-                        <input type="password" name="user=password" id="userpassword">
+                        <input type="password" name="user=password" id="userpassword" minlength="6">
                     </li>
                 </ul>
             </section>
@@ -38,11 +38,11 @@
                 <ul>
                     <li>
                         <label for="userage">Your age</label>
-                        <input type="number" step="10" name="user-age" id="userage">
+                        <input type="number" step="10" name="user-age" id="userage" required min="18">
                     </li>
                     <li>
                         <label for="birthdate">Your birthdate</label>
-                        <input type="date" id="birthdate" name="userbirthdate">
+                        <input type="date" id="birthdate" name="userbirthdate" max="2003-02-12">
                     </li>
                     <li>
                         <label for="usermessage">Your message</label>
@@ -62,15 +62,15 @@
                 <h2>How should we verify your account?</h2>
                 <ul>
                     <li class="form-control-inline">
-                        <input type="radio" name="verify" id="txt" value="text-message">
+                        <input type="radio" name="verify" id="txt" value="text-message" required>
                         <label for="txt">Via text msg</label>
                     </li>
                     <li class="form-control-inline">
-                        <input type="radio" name="verify" id="call" value="phone">
+                        <input type="radio" name="verify" id="call" value="phone" required>
                         <label for="call">Via call</label>
                     </li>
                     <li class="form-control-inline">
-                        <input type="radio" name="verify" id="email" value="email">
+                        <input type="radio" name="verify" id="email" value="email" required>
                         <label for="email">Via email</label>
                     </li>
                 </ul>
