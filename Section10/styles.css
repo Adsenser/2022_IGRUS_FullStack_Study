@@ -17,7 +17,9 @@ label {
     display: block; /*인라인 요소로 되어있으로 상하 마진 무시됨 so 블록요소로 변경하기 */
 }
 
-input {
+input,
+textarea,
+select {
     width: 100%;
     display: block;
     margin-bottom: 1rem;
@@ -27,7 +29,8 @@ input {
     color: rgb(194, 64, 64);
 }
 
-input:focus {
+input:focus,
+textarea {
     background-color: purple;
     color:rgb(194, 64, 64);
     border-color: blue;

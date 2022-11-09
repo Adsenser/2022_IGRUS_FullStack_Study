@@ -13,6 +13,10 @@
     <form action="/user-data" method="POST">
         <label for="username">Your name</label>
         <input type="text" name="user-name" id="username">
+
+        <label for="usermessage">Your message</label>
+        <textarea id="usermessage" name="user=message"></textarea>
+
         <label for="useremail">Your email address</label>
         <input type="email" name="user-email" id="useremail">
         <label for="userage">Your age</label>
@@ -22,6 +26,13 @@
         <label for="birthdate">Your birthdate</label>
         <input type="date" id="birthdate" name="userbirthdate">
         <hr>
+        <label for="favorite-color">Your favorite color?</label>
+        <select id="favorite-color" name="favorite-color">
+            <option value="blue">MMMBlue</option>
+            <option value="">Black</option>
+            <option value="">Red</option>
+        </select>
+
         <h2>How should we verify your account?</h2>
         <div class="form-control-inline">
             <input type="radio" name="verify" id="txt" value="text-message">
