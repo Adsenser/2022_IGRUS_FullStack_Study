@@ -13,6 +13,40 @@
     <form action="/user-data" method="POST">
         <label for="username">Your name</label>
         <input type="text" name="user-name" id="username">
+        <label for="useremail">Your email address</label>
+        <input type="email" name="user-email" id="useremail">
+        <label for="userage">Your age</label>
+        <input type="number" step="10" name="user-age" id="userage">
+        <label for="userpassword">Your password</label>
+        <input type="password" name="user=password" id="userpassword">
+        <label for="birthdate">Your birthdate</label>
+        <input type="date" id="birthdate" name="userbirthdate">
+        <hr>
+        <h2>How should we verify your account?</h2>
+        <div class="form-control-inline">
+            <input type="radio" name="verify" id="txt" value="text-message">
+            <label for="txt">Via text msg</label>
+        </div>
+       <div class="form-control-inline">
+        <input type="radio" name="verify" id="call" value="phone">
+        <label for="call">Via call</label>
+       </div>
+        <div class="form-control-inline">
+            <input type="radio" name="verify" id="email" value="email">
+            <label for="email">Via email</label>
+        </div>
+        <div class="form-control-inline">
+            <input type="checkbox" id="agree" name="terms">
+            <label for="agree">Agree to terms?</label>
+        </div>
+        <div class="form-control-inline">
+            <input type="checkbox" id="contact-email" name="contact" value="email">
+            <label for="contact-email">Contact me via email</label>
+        </div>
+        <div class="form-control-inline">
+            <input type="checkbox" id="contact-phone" name="contact" value="phone">
+            <label for="contact-phone">Contact me via phone</label>
+        </div>
         <button>Submit</button>
     </form>
 </body>
