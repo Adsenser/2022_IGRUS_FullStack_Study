@@ -23,6 +23,10 @@ input,textarea,select {
     resize: none;
 }
 
+input:focus,textarea:focus {
+    background-color: rgb(108, 108, 171);
+}
+
 #section-readio input {
     display:inline;
 }
@@ -46,20 +50,36 @@ div{
 button {
     padding: 0.2rem 0.8rem;
     margin: 2px;
+    font-size: 1rem;
+    border-radius: 3px;
 }
 
 #clear {
     background-color: rgba(169, 203, 192, 0);
     color: rgb(67,56,96);
     border: 1px solid rgb(156,164,196);
-    border-radius: 3px;
-    font-size: 1rem;
+    
     
 }
 #submit {
     background-color: rgba(57, 66, 96);
     color: white;
     border: 1px solid rgb(57,66,96);
-    border-radius: 3px;
-    font-size: 1rem;
+    
+    
+}
+
+#submit:hover {
+    background-color: rgb(106, 114, 141);
+    color: white;
+    border: 1px solid rgb(57,66,96);
+}
+
+.inline-control {
+    display: flex;
+}
+
+.inline-control input {
+    width: auto; 
+    /* auto 이거 안하니깐 선택버튼 동그라미까지 같이 커짐 */
 }
