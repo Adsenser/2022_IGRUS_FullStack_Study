@@ -9,10 +9,13 @@ let job = {
 
 
 alert(hobbies[0]);
+age = 45; //변수 한번 선언하면 let 다시 할 필요없음
 
 let adultyears
 function calculateAdultYears() {
-    adultyears = age - 18 - 5*1 ;
+    return age - 18 - 5*1 ;
 }
+
+adultyears = calculateAdultYears();
 alert(adultyears);
-age = 45; //변수 한번 선언하면 let 다시 할 필요없음
+
