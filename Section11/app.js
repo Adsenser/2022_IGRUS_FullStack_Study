@@ -12,10 +12,10 @@ alert(hobbies[0]);
 age = 45; //변수 한번 선언하면 let 다시 할 필요없음
 
 let adultyears
-function calculateAdultYears() {
-    return age - 18 - 5*1 ;
+function calculateAdultYears(userAge) {
+    return userAge - 18 - 5*1 ;
 }
 
-adultyears = calculateAdultYears();
+adultyears = calculateAdultYears(age);
 alert(adultyears);
 
