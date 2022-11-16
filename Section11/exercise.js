@@ -36,12 +36,10 @@ let group = {
 
 alert(group.goal[1]);
 
-function totalPrice(a) {
-    return a + 7000
+function getlist(array,index) {
+    let arrayElement = array[index];
+    return arrayElement;
 };
 
-
-alert(totalPrice(price));
-alert(totalPrice(4000));
-alert(totalPrice(3000));
-alert(totalPrice(1000));
+let firstGoal = getlist(group.goal, 0);
+alert(firstGoal);
