@@ -8,7 +8,6 @@ let job = {
     salary: 5000};
 
 
-alert(hobbies[0]);
 age = 45; //변수 한번 선언하면 let 다시 할 필요없음
 
 let adultyears
@@ -17,11 +16,11 @@ function calculateAdultYears(userAge) {
 }
 
 adultyears = calculateAdultYears(age);
-alert(adultyears);
+console.log(adultyears)
 
 let person = {
     greet() {
-        alert('Hello')
+        console.log('Hello')
     }
 }
 
