@@ -19,3 +19,10 @@ function calculateAdultYears(userAge) {
 adultyears = calculateAdultYears(age);
 alert(adultyears);
 
+let person = {
+    greet() {
+        alert('Hello')
+    }
+}
+
+person.greet()
