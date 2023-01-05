@@ -5,16 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Advanced JavaScript</title>
-        <script src="app.js" defer></script>  
+        <script src="assignment.js" defer></script>  
+        <link rel="stylesheet" href="styles.css">
         
     </head>
     <body>
-        <h1 id="id2">Hello</h1>
-        <p>New</p>
-        <p class="highlighted-paragraph">
-            This is a 
-            <a id="id1" href= "#" >link</a>
-        </p>
-        
+        <form action="">
+            <div class="control">
+                <label for="product-name">Name</label>
+                <input type="text" id="product-name" maxlength="60">
+                <span>
+                    <span id="remaining-chars">60</span>/60 <!--앞에만 span 안에 넣어야지 그 부분만 나중에 타겟팅 가능하기 때문-->
+                </span>
+            </div>
+            <button>Submit</button>
+        </form>
     </body>
 </html>
