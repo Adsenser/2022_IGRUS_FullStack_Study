@@ -1,20 +1,21 @@
-// console.dir(window.document)
-// document.body.children[2].children[0].href = 'https://google.com';
+let paragraphElement = document.querySelector('p');
 
-// let acnchorElement = document.getElementById('id1');
-// acnchorElement.href = 'https://google.com'
+function changeParagraphText(event) {
+  paragraphElement.textContent = 'Clicked!';
+  console.log('Paragraph clicked!');
+  console.log(event);
+}
 
-// document.querySelector('#id1')
+paragraphElement.addEventListener('click', changeParagraphText);
 
-// answer1 = document.body.children[0];
-// document.body.children[1];
-// document.body
-// document.getElementById('id2')
-// document.querySelector('p') = 'AAAAA'
+let inputElement = document.querySelector('input');
 
-let newAnchorElement = document.createElement('a');
-newAnchorElement.href = 'https://naver.com'
-newAnchorElement.textContent = 'go to naver'
+function retrieveUserInput(event) {
+  // let enteredText = inputElement.value;
+  let enteredText = event.target.value;
+  // let enteredText = event.data; => This is different!
+  console.log(enteredText);
+  // console.log(event);
+}
 
-let firstParagraph = document.querySelector('p');
-firstParagraph.append(newAnchorElement)
+inputElement.addEventListener('input', retrieveUserInput);
