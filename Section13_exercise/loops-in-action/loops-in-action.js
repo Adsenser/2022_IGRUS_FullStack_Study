@@ -1,3 +1,4 @@
+// 1번 문제
 const calculateSumButtonElement = document.querySelector('#calculator button');
 
 function calculateSum () {
@@ -16,3 +17,17 @@ function calculateSum () {
     outputResultElement.style.display = 'block';
 }
 calculateSumButtonElement.addEventListener('click',calculateSum);
+
+//2번 문제
+
+const highlightLinksButtonElement = document.querySelector('#highlight-links button');
+
+function highlightLinks() {
+    const anchorElements = document.querySelectorAll('#highlight-links a');
+
+    for (const anchorElement of anchorElements) {
+        anchorElement.classList.add('highlight');
+    }
+}
+
+highlightLinksButtonElement.addEventListener('click', highlightLinks);
