@@ -5,27 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/overlays.css">
+    <link rel="stylesheet" href="styles/configuration.css">
     <title>Tic Tac Toc</title>
 </head>
 <body>
-    <header>
+    <div id="backdrop"></div>
+    <header id="main-header">
         <h1>Play Tic, Tac, Toe</h1>
         <p>Built with HTML, CSS, JS, and etc...</p>
     </header>
     <main>
-        <aside>
-            <h2>Choose your name</h2>
-            <form>
-                <div>
-                    <label for="playername">Player name</label>
-                    <input type="text" name="username" id="playername">
-                </div>
-                <div>
-                    <button type="button">Cancel</button>
-                    <button type="submit">Confirm</button>
-                </div>
-            </form>
+        <aside class="modal">
+            <!-- <div class="config-overlay"> -->
+                <h2>Choose your name</h2>
+                <form>
+                    <div class="form-control">
+                        <label for="playername">Player name</label>
+                        <input type="text" name="username" id="playername">
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-alt">Cancel</button>
+                        <button type="submit" class="btn">Confirm</button>
+                    </div>
+                </form>
+            <!-- </div> -->
         </aside> <!--페이지에 약간의 보완할 내용이 있거난 상호작용 요소를 가지고 있을 때마다 사용하기 좋은 요소-->
         <section id="game-configuration">
             <ol>
@@ -33,20 +38,20 @@
                     <article>
                         <h2>Player 1</h2>
                         <h3>PLAYER NAME</h3>
-                        <p>X</p>
-                        <button>Edit</button>
+                        <p class="player-symbol">X</p>
+                        <button class="btn btn-alt">Edit</button>
                     </article>
                 </li>
                 <li>
                     <article>
                         <h2>Player 2</h2>
                         <h3>PLAYER NAME</h3>
-                        <p>O</p>
-                        <button>Edit</button>
+                        <p class="player-symbol">O</p>
+                        <button class="btn btn-alt">Edit</button>
                     </article>
                 </li>
             </ol>
-            <button>Start New Game</button>
+            <button class="btn">Start New Game</button>
         </section>
         <section id="active-game">
             <article>
