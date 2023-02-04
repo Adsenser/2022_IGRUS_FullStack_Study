@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-
+app.use(express.urlencoded({extended: false})); //extended fasle는 경고를 받지 않도록 명시적으로 설정
 
 app.get('/currenttime', function(request, response){
     response.send('<h1>' +new Date().toISOString() + '</h1>');
