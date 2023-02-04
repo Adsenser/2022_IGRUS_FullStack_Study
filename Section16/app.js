@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 
 const app = express();
@@ -15,7 +17,18 @@ app.get('/',function(req,res){
 
 app.post('/store-user',function(req,res){
     const userName = req.body.username;
-    console.log(userName);
+    // console.log(userName);
+
+    const filePath = path.join(__dirname, 'data', 'users.json'); //이 프로젝트 디렉토리에 대한 절대 경로를 실제로 보유하는 내장된 변수또는 상수를 의미
+    
+    
+    const fileData = fs.writeFileSync(filePath);
+    const existingUsers = JSON.parse(fileData);
+    //위에서 const를 쓸 수 있는 이유는 메모리의 기본값을 변경하는 것은 맞지만, existingUsers에 새로운 값을 할당하지 않기 때문임.
+    existingUsers.push(userName); //해당 배열에 새로운 항목을 추가해줌 push가
+
+    fs.writeFileSync(filePath, JSON.stringify(existingUsers)); //stringify 안하면 원시텍스트가 아니라 JS배열이 되어서 실패함.
+    
     res.send('<h1>Username stored</h1>');
 
 })
