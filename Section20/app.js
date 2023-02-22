@@ -41,7 +41,7 @@ app.get('/restaurants/:id', function (req, res) {
     }
   }
 
-  res.render('404');
+  res.status(404).render('404');
 });
 
 app.get('/recommend', function (req, res) {
@@ -72,11 +72,12 @@ app.get('/about', function (req, res) {
 });
 
 app.use(function (req, res) {
-  res.render('404');
+  res.status(404).render('404');
+  //status를 통해 사용자 정의 상태 코드를 설정할 수 있음
 });
 
 app.use(function (error, req, res, next) { //얘는 4개의 매개변수를 수신해야함
-  res.render('500');
+  res.status(500).render('500');
 });
 
 app.listen(3000);
