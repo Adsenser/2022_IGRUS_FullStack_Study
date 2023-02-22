@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const express = require('express');
+const uuid = require('uuid'); //'uuid'에서 객체를 얻는다는 의미임
 
 const app = express();
 
@@ -46,6 +47,8 @@ app.get('/recommend', function (req, res) {
 
 app.post('/recommend', function (req, res) {
   const restaurant = req.body;
+  restaurant.id = uuid.v4(); //존재하지 않는 필드에 액세스 ->js에선 js가 간단히 생성해줌 //이건 속성으로 들어오는 객체의 일부가 아님
+  // v4: 무작위로 생성되지만 고유함을 보장하는 고유한 id를 제공해 줄것임
   const filePath = path.join(__dirname, 'data', 'restaurants.json');
 
   const fileData = fs.readFileSync(filePath);
