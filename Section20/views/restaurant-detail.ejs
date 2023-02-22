@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <%- include('includes/head') %>
-    <link rel="stylesheet" href="/styles/restaurants.css" /> <!--절대경로로 전환-->
+    <link rel="stylesheet" href="/styles/restaurants.css" />
   </head>
   <body>
     <%- include('includes/header') %>
     <%- include('includes/side-drawer') %>
     <main>
-      <h1>TITLE OF THE RESTAURANT <%= restaurant.name %></h1> 
-      <p> <%=restaurant.cuisine %> | <%=restaurant.address%></p>
-      <p><%=restaurant.description %></p>
-      <p><a href="<%=restaurant.website %>">View Website</a></p>
+      <h1><%= restaurant.name %></h1>
+      <p><%= restaurant.cuisine %> | <%= restaurant.address %></p>
+      <p><%= restaurant.description %></p>
+      <p><a href="<%= restaurant.website %>">View Website</a></p>
     </main>
   </body>
 </html>
