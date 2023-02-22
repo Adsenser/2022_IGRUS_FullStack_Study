@@ -37,9 +37,12 @@ app.get('/restaurants/:id', function (req, res) {
 
   for (const restaurant of storedRestaurants) {
     if (restaurant.id === restaurantId) {
-      return res.render('restaurant-detail', { restaurant: restaurant }); //값에 해당하는 restaurant는 for 문에서 정의한 상수 restaurant임
+      return res.render('restaurant-detail', { restaurant: restaurant });
     }
+    //if else로 접근하면 안됨
   }
+  //어차피 for안에서 일치 값 찾으면 return으로 인해 자동으로 함수 종료되므로 404를 맨 밑에 박아둔것
+  res.render('404');
 });
 
 app.get('/recommend', function (req, res) {
