@@ -1,13 +1,13 @@
 const fs = require('fs');
+// app.js에서 fs 요구사항 제거 -> 파일 시스템을 더 이상 사용하지 않기 때문
+
+
 const path = require('path');
 
 const express = require('express');
-const uuid = require('uuid');
 
-// ** Require문에서 노드 js의 경로를 표현하는 방법 **
-const resData = require('./util/restaurant-data');
-// 내장된 패키지나 타사 패키지를 require 하는 경우와 달리 우리만의 파일의 경우에는 경로를 추가해야 함
-// ./는 노드js에게 이 파일이 이 코드가 있는 이웃 파일, 형제 파일이라는 사실을 알려주는 것
+const defaultRoutes = require('./routes/default');
+const restaurantRoutes = require('./routes/restaurants');
 
 const app = express();
 
@@ -17,55 +17,14 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', function (req, res) {
-  res.render('index');
-});
-
-app.get('/restaurants', function (req, res) {
-  const storedRestaurants = resData.getStoredRestaurants();
-
-  res.render('restaurants', {
-    numberOfRestaurants: storedRestaurants.length,
-    restaurants: storedRestaurants,
-  });
-});
-
-app.get('/restaurants/:id', function (req, res) {
-  const restaurantId = req.params.id;
-  const storedRestaurants = resData.getStoredRestaurants();
-
-  for (const restaurant of storedRestaurants) {
-    if (restaurant.id === restaurantId) {
-      return res.render('restaurant-detail', { restaurant: restaurant });
-    }
-  }
-
-  res.render('404');
-});
-
-app.get('/recommend', function (req, res) {
-  res.render('recommend');
-});
-
-app.post('/recommend', function (req, res) {
-  const restaurant = req.body;
-  restaurant.id = uuid.v4();
-  const restaurants =  resData.getStoredRestaurants(); //resData 객체를 이용해 함수 호출 //객체를 참조해 이 getStored~~ 라는 특정 매서드를 호출한것임
-
-  restaurants.push(restaurant);
-
-  resData.storeRestaurants(restaurants);
-
-  res.redirect('/confirm');
-});
-
-app.get('/confirm', function (req, res) {
-  res.render('confirm');
-});
-
-app.get('/about', function (req, res) {
-  res.render('about');
-});
+// /로 시작하는 모든 수신 요청은 defaultRoutes에 의해 처리되어야함
+app.use('/', defaultRoutes); // 이 첫번째 매개변수 값은 들어오는 경로의 시작을 확인하는 필터 역할을 함
+// 따라서 여기 있는 /는 들어오는 요청에 대해 활성화될 것임
+// 이는 들어오는 모든 요청이 defaultRoutes로 전달된다는 것을 의미함
+// 그리고 이 라우트 중 하나가 일치하면 들어오는 요청이 완료될 것임.
+// 여기 있는 이러한 라우트 중 들어오는 요청과 일치하지 않는 경우에만 app.js로 돌아가서 다른 라우트도 살펴볼 것임
+app.use('/', restaurantRoutes);
+// 퍼널 (funnel) : 깔떼기 라는 뜻
 
 app.use(function (req, res) {
   res.render('404');
