@@ -4,7 +4,10 @@ const path = require('path');
 const express = require('express');
 const uuid = require('uuid');
 
+// ** Require문에서 노드 js의 경로를 표현하는 방법 **
 const resData = require('./util/restaurant-data');
+// 내장된 패키지나 타사 패키지를 require 하는 경우와 달리 우리만의 파일의 경우에는 경로를 추가해야 함
+// ./는 노드js에게 이 파일이 이 코드가 있는 이웃 파일, 형제 파일이라는 사실을 알려주는 것
 
 const app = express();
 
@@ -47,7 +50,7 @@ app.get('/recommend', function (req, res) {
 app.post('/recommend', function (req, res) {
   const restaurant = req.body;
   restaurant.id = uuid.v4();
-  const restaurants = resData.getStoredRestaurants();
+  const restaurants =  resData.getStoredRestaurants(); //resData 객체를 이용해 함수 호출 //객체를 참조해 이 getStored~~ 라는 특정 매서드를 호출한것임
 
   restaurants.push(restaurant);
 
